@@ -1,13 +1,10 @@
 @import 'vars';
 @import 'bootstrap';
 
-h1, h2, h3, h4, h5, h6 {
-  text-transform: uppercase;
-}
-
 h2 {
   text-align: center;
-  margin-bottom: 1.5em;
+  font-weight: 100;
+  margin-bottom: 35px;
 }
 
 .anchor {
@@ -32,15 +29,12 @@ body {
   url(images/mandala-transparent.png) no-repeat 75% 1300px,
   url(images/mandala-transparent.png) no-repeat 5% 1800px,
   linear-gradient(160deg, #903921, #C8611A);
-
   background-size: 600px, 1000px, 700px, 1000px, 600px, 100% 100%;
-
 }
 
 /* nav */
 nav {
   height: 50px;
-  font-weight: 100;
   position: fixed;
   width: 100%;
   z-index: 1000;
@@ -49,6 +43,7 @@ nav {
   a {
     color: $white;
     font-family: $font-header;
+    font-size: 24px;
     transition: ease-in-out color .15s;
 
     &:hover {
@@ -56,9 +51,13 @@ nav {
     }
   }
 
+  .container {
+    max-width: 700px;
+  }
+
   .logo-titel {
-    height: 2em;
-    margin-left: -100px;
+    position: absolute;
+    margin-left: -300px;
 
     @include media-breakpoint-down(md) {
       margin-left: 0;
@@ -68,6 +67,10 @@ nav {
       border: 10px solid $secondary;
       width: 160px;
     }
+  }
+
+  .menu {
+    height: 50px;
   }
 }
 
@@ -105,6 +108,13 @@ nav {
     width: 100%;
   }
 }
+
+.programma {
+  p {
+    font-size: 1.5em;
+  }
+}
+
 .diescie-foto-container {
   display: flex;
   justify-content: center;
@@ -112,49 +122,6 @@ nav {
   .diescie-foto {
     max-width: 800px;
     width: 100%;
-  }
-}
-
-.commissie {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0 calc(10% - 10px);
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-end;
-
-  .functie {
-    text-transform: uppercase;
-  }
-
-  & > div {
-    opacity: 0;
-    transition: opacity ease-in-out 0.6s, transform ease-in-out 0.6s;
-    height: 100%;
-    padding-top: 50%;
-
-    transform: translateY(20px);
-
-    & > div {
-      bottom: 0;
-      line-height: 1;
-      text-align: center;
-
-      padding: 0.2em;
-      border: 1px solid $kleur-bruin;
-      //background: $kleur-bruin;
-      height: auto;
-
-    }
-
-    &:hover {
-      transform: translateY(0);
-      opacity: 1;
-      transition: opacity ease-in-out 0.6s, transform ease-in-out 0.2s;
-    }
   }
 }
 

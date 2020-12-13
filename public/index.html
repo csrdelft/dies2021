@@ -16,18 +16,18 @@
 <body>
     <a id="home"></a>
     <nav class="site-header">
-        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center my-1">
-            <a class="logo-titel py-1 d-inline-block" href="#">
+        <div class="container">
+            <a class="logo-titel d-inline-block" href="#">
                 <img src="${require('../src/assets/images/logo-menu.png')}"
                     srcset="${require('../src/assets/images/logo-menu.png')} 320w, ${require('../src/assets/images/logo-menu-2x.png')} 1000w"
                     alt="Logo menu"/>
             </a>
-            <a class="py-1 d-none d-md-inline-block" href="#home">Home</a>
-            <a class="py-1 d-none d-md-inline-block" href="#filmpje">Themafilmpje</a>
-            <a class="py-1 d-none d-md-inline-block" href="#programma">Programma</a>
-            <a class="py-1 d-none d-md-inline-block" href="#commissie">Commissie</a>
-            <a class="py-1 d-none d-md-inline-block text-decoration-line-through" href="#commissie">Ketzers</a>
-            <a class="py-1 d-none d-md-inline-block text-decoration-line-through" href="#commissie">Livestreams</a>
+            <div class="menu d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <a class="d-none d-md-inline-block" href="#home">Home</a>
+                <a class="d-none d-md-inline-block" href="#filmpje">Themafilmpje</a>
+                <a class="d-none d-md-inline-block" href="#programma">Programma</a>
+                <a class="d-none d-md-inline-block" href="#commissie">Commissie</a>
+            </div>
         </div>
     </nav>
 
@@ -55,7 +55,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="programma">
         <a class="anchor" id="programma"></a>
         <h2>Programma</h2>
         <div class="container">
@@ -63,7 +63,7 @@
                 activiteiten. Als het programma zekerder zal zijn, komt hij hier gelijk te staan en laten wij dit weten.</p>
         </div>
     </section>
-    <section>
+    <section class="commissie">
         <a class="anchor" id="commissie"></a>
         <h2>Commissie</h2>
         <div class="container">
