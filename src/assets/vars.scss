@@ -1,18 +1,25 @@
 /* variables */
-$kleur-bruin: #C8611A;
+$kleur-bruin: #903921;
+$kleur-oranje: #C8611A;
+$kleur-roze: #D08976;
+$white: #FFFBFA;
 
-$achtergrond: #33332D;
-
-$white: #f6c8b1;
 /* bootstrap override */
 $font-color: $white;
+// @font-face {
+//   font-family: "BossaNovaMVB";
+//   src: url("/fonts/BossaNovaMVB.otf") format("otf")
+// }
+
 $font-header: Calibri, sans-serif;
 $font-text: Calibri, sans-serif;
 
 $primary: $kleur-bruin;
+$secondary: $kleur-oranje;
 
 $theme-colors: (
   "primary": $kleur-bruin,
+  "secondary": $kleur-oranje,
   "danger": #ff4136,
   "white": #f6c8b1,
 );
@@ -21,7 +28,7 @@ $font-family-sans-serif: $font-text;
 $headings-font-family: $font-header;
 $headings-font-weight: 700;
 $body-color: $white;
-$body-bg: $achtergrond;
+$body-bg: $kleur-bruin;
 
 $h2-font-size: 2.25rem;
 $h3-font-size: 1rem;

@@ -20,9 +20,7 @@ h2 {
 }
 
 section {
-  padding: 90px 0 5em;
-  position: relative;
-  min-height: 100vh;
+  margin-bottom: 100px;
 }
 
 body {
@@ -39,43 +37,16 @@ body {
 
 /* nav */
 nav {
+  height: 50px;
   font-weight: 100;
   position: fixed;
   width: 100%;
-  margin: 20px 0 10px 0;
-  border-top: 2px solid $kleur-bruin;
-  border-bottom: 2px solid $kleur-bruin;
-  padding: .2rem 0;
   z-index: 1000;
-  background: $achtergrond;
-  top: 0;
-
-  // Dubbele border van breedte 'padding'
-  &::before, &::after {
-    content: '';
-    border-top: 2px solid $kleur-bruin;
-    display: block;
-    bottom: 0.2rem;
-    width: 100%;
-    position: absolute;
-  }
-
-  &::before {
-    border-bottom: 2px dotted #6F6E69;
-    bottom: 50%;
-    width: 100%;
-    top: 0.2rem;
-    position: absolute;
-    z-index: 9;
-  }
+  background: $kleur-oranje;
 
   a {
-    padding: 0 1em;
-    z-index: 10;
-    background: $achtergrond;
+    color: $white;
     font-family: $font-header;
-    text-transform: uppercase;
-    //color: $kleur-bruin;
     transition: ease-in-out color .15s;
 
     &:hover {
@@ -92,10 +63,8 @@ nav {
     }
 
     img {
-      border: 10px solid $primary;
-      background-color: $achtergrond;
-      margin-top: -35px;
-      width: 200px;
+      border: 10px solid $secondary;
+      width: 160px;
     }
   }
 }
@@ -107,7 +76,7 @@ nav {
   align-items: center;
 
   .logo-groot {
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
   }
 
@@ -117,10 +86,8 @@ nav {
 }
 
 /* sections */
-
 .head {
-  padding: 80px 0 0 0;
-
+  padding-top: 105px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -128,21 +95,22 @@ nav {
 
 /* video */
 .video .video-container {
-  width: 100%;
-  padding: 10%;
+  display: flex;
+  justify-content: center;
 
   .youtube-container {
+    max-width: 800px;
     width: 100%;
   }
 }
-
-.diescie-foto {
-  padding: 0 10%;
-  width: 100%;
-}
-
 .diescie-foto-container {
-  position: relative;
+  display: flex;
+  justify-content: center;
+
+  .diescie-foto {
+    max-width: 800px;
+    width: 100%;
+  }
 }
 
 .commissie {
@@ -175,7 +143,7 @@ nav {
 
       padding: 0.2em;
       border: 1px solid $kleur-bruin;
-      //background: $achtergrond;
+      //background: $kleur-bruin;
       height: auto;
 
     }
@@ -208,12 +176,9 @@ nav {
     padding: 100px 0 0 0;
   }
   nav {
-    margin: 20px 0 10px 0;
-
     .logo-titel {
       img {
         width: 100px;
-        margin-top: -25px;
       }
     }
   }
