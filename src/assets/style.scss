@@ -1,6 +1,5 @@
 @import 'vars';
 @import 'bootstrap';
-@import 'cols';
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
@@ -9,10 +8,6 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
   text-align: center;
   margin-bottom: 1.5em;
-}
-
-.programma-poster {
-  padding: 0 5em;
 }
 
 .anchor {
@@ -99,7 +94,6 @@ nav {
     img {
       border: 10px solid $primary;
       background-color: $achtergrond;
-      //clip-path: circle(50%);
       margin-top: -35px;
       width: 200px;
     }
@@ -119,11 +113,6 @@ nav {
 
   picture {
     box-shadow: 0 0 15px 0 black;
-  }
-
-  .titel {
-    max-width: 600px;
-    width: 100%;
   }
 }
 
@@ -191,40 +180,12 @@ nav {
 
     }
 
-    @include media-breakpoint-up(md) {
-      .michelle {
-        transform: translateY(0);
-      }
-
-      .dennis, .marin, .rebecca {
-        transform: translateY(40px);
-      }
-
-      .bram {
-        transform: translateY(20px);
-      }
-
-      .wesley {
-        transform: translateY(10px);
-      }
-    }
-
     &:hover {
       transform: translateY(0);
       opacity: 1;
       transition: opacity ease-in-out 0.6s, transform ease-in-out 0.2s;
     }
   }
-}
-
-.programma img {
-  width: 100%;
-}
-
-.draadje-link {
-  font-size: 2em;
-  text-align: center;
-  margin: 1em;
 }
 
 @include media-breakpoint-down(md) {
