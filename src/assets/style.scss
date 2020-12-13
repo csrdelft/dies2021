@@ -23,13 +23,14 @@ section {
 }
 
 body {
-  background: url(images/mandala-transparent.png) no-repeat -10% 0,
-  url(images/mandala-transparent.png) no-repeat 80% 300px,
-  url(images/mandala-transparent.png) no-repeat 10% 800px,
-  url(images/mandala-transparent.png) no-repeat 75% 1300px,
-  url(images/mandala-transparent.png) no-repeat 5% 1800px,
+  background: url(images/mandala-transparent.png) no-repeat 10% 0,
+  url(images/mandala-transparent.png) no-repeat 100% 300px,
+  url(images/mandala-transparent.png) no-repeat -20% 700px,
+  url(images/mandala-transparent.png) no-repeat 85% 1500px,
+  url(images/mandala-transparent.png) no-repeat -25% 1800px,
+  url(images/mandala-transparent.png) no-repeat 100% 2200px,
   linear-gradient(160deg, #903921, #C8611A);
-  background-size: 600px, 1000px, 700px, 1000px, 600px, 100% 100%;
+  background-size: 600px, 1100px, 950px, 600px, 1300px, 700px, 100% 100%;
 }
 
 /* nav */
@@ -39,6 +40,7 @@ nav {
   width: 100%;
   z-index: 1000;
   background: $kleur-oranje;
+  border-bottom: $kleur-bruin dashed 3px;
 
   a {
     color: $white;
@@ -64,7 +66,7 @@ nav {
     }
 
     img {
-      border: 10px solid $secondary;
+      border: 8px solid $secondary;
       width: 160px;
     }
   }
