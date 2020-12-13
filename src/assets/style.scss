@@ -86,7 +86,9 @@ nav {
   }
 
   picture {
-    box-shadow: 0 0 15px 0 black;
+    -webkit-box-shadow: 0px 7px 20px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 7px 20px 0px rgba(0,0,0,0.45);
+    box-shadow: 0px 7px 20px 0px rgba(0,0,0,0.45);
   }
 }
 
@@ -126,29 +128,28 @@ nav {
 }
 
 @include media-breakpoint-down(md) {
-  .commissie {
-    position: relative;
-    flex-direction: column;
-    align-items: stretch;
-
-    & > div {
-      height: auto;
-      opacity: 1;
-      padding: 0.5em;
-      transform: translateY(0) !important;
+  nav {
+    .logo-titel {
+      img {
+        display: none;
+      }
     }
   }
 }
 
 @include media-breakpoint-down(sm) {
-  .head {
-    padding: 100px 0 0 0;
-  }
   nav {
+    height: 20px;
+
     .logo-titel {
       img {
         width: 100px;
+        display: block;
       }
+    }
+
+    .menu {
+      height: 20px;
     }
   }
 }
