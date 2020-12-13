@@ -1,0 +1,29 @@
+/* variables */
+$kleur-bruin: #C8611A;
+
+$achtergrond: #33332D;
+
+$white: #f6c8b1;
+/* bootstrap override */
+$font-color: $white;
+$font-header: Calibri, sans-serif;
+$font-text: Calibri, sans-serif;
+
+$primary: $kleur-bruin;
+
+$theme-colors: (
+  "primary": $kleur-bruin,
+  "danger": #ff4136,
+  "white": #f6c8b1,
+);
+
+$font-family-sans-serif: $font-text;
+$headings-font-family: $font-header;
+$headings-font-weight: 700;
+$body-color: $white;
+$body-bg: $achtergrond;
+
+$h2-font-size: 2.25rem;
+$h3-font-size: 1rem;
+$h4-font-size: 1.2rem;
+$line-height-base: 1.8;

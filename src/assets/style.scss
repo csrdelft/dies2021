@@ -1,0 +1,263 @@
+@import 'vars';
+@import 'bootstrap';
+@import 'cols';
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.programma-poster {
+  padding: 0 5em;
+}
+
+.anchor {
+  position: absolute;
+  top: 0;
+}
+
+.heavy {
+  font-weight: 700;
+}
+
+section {
+  padding: 90px 0 5em;
+  position: relative;
+  min-height: 100vh;
+}
+
+body {
+  background: url(images/mandala-transparent.png) no-repeat -10% 0,
+  url(images/mandala-transparent.png) no-repeat 80% 300px,
+  url(images/mandala-transparent.png) no-repeat 10% 800px,
+  url(images/mandala-transparent.png) no-repeat 75% 1300px,
+  url(images/mandala-transparent.png) no-repeat 5% 1800px,
+  linear-gradient(160deg, #903921, #C8611A);
+
+  background-size: 600px, 1000px, 700px, 1000px, 600px, 100% 100%;
+
+}
+
+/* nav */
+nav {
+  font-weight: 100;
+  position: fixed;
+  width: 100%;
+  margin: 20px 0 10px 0;
+  border-top: 2px solid $kleur-bruin;
+  border-bottom: 2px solid $kleur-bruin;
+  padding: .2rem 0;
+  z-index: 1000;
+  background: $achtergrond;
+  top: 0;
+
+  // Dubbele border van breedte 'padding'
+  &::before, &::after {
+    content: '';
+    border-top: 2px solid $kleur-bruin;
+    display: block;
+    bottom: 0.2rem;
+    width: 100%;
+    position: absolute;
+  }
+
+  &::before {
+    border-bottom: 2px dotted #6F6E69;
+    bottom: 50%;
+    width: 100%;
+    top: 0.2rem;
+    position: absolute;
+    z-index: 9;
+  }
+
+  a {
+    padding: 0 1em;
+    z-index: 10;
+    background: $achtergrond;
+    font-family: $font-header;
+    text-transform: uppercase;
+    //color: $kleur-bruin;
+    transition: ease-in-out color .15s;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .logo-titel {
+    height: 2em;
+    margin-left: -100px;
+
+    @include media-breakpoint-down(md) {
+      margin-left: 0;
+    }
+
+    img {
+      border: 10px solid $primary;
+      background-color: $achtergrond;
+      //clip-path: circle(50%);
+      margin-top: -35px;
+      width: 200px;
+    }
+  }
+}
+
+/* header */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .logo-groot {
+    max-width: 500px;
+    width: 100%;
+  }
+
+  picture {
+    box-shadow: 0 0 15px 0 black;
+  }
+
+  .titel {
+    max-width: 600px;
+    width: 100%;
+  }
+}
+
+/* sections */
+
+.head {
+  padding: 80px 0 0 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* video */
+.video .video-container {
+  width: 100%;
+  padding: 10%;
+
+  .youtube-container {
+    width: 100%;
+  }
+}
+
+.diescie-foto {
+  padding: 0 10%;
+  width: 100%;
+}
+
+.diescie-foto-container {
+  position: relative;
+}
+
+.commissie {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 calc(10% - 10px);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+
+  .functie {
+    text-transform: uppercase;
+  }
+
+  & > div {
+    opacity: 0;
+    transition: opacity ease-in-out 0.6s, transform ease-in-out 0.6s;
+    height: 100%;
+    padding-top: 50%;
+
+    transform: translateY(20px);
+
+    & > div {
+      bottom: 0;
+      line-height: 1;
+      text-align: center;
+
+      padding: 0.2em;
+      border: 1px solid $kleur-bruin;
+      //background: $achtergrond;
+      height: auto;
+
+    }
+
+    @include media-breakpoint-up(md) {
+      .michelle {
+        transform: translateY(0);
+      }
+
+      .dennis, .marin, .rebecca {
+        transform: translateY(40px);
+      }
+
+      .bram {
+        transform: translateY(20px);
+      }
+
+      .wesley {
+        transform: translateY(10px);
+      }
+    }
+
+    &:hover {
+      transform: translateY(0);
+      opacity: 1;
+      transition: opacity ease-in-out 0.6s, transform ease-in-out 0.2s;
+    }
+  }
+}
+
+.programma img {
+  width: 100%;
+}
+
+.draadje-link {
+  font-size: 2em;
+  text-align: center;
+  margin: 1em;
+}
+
+@include media-breakpoint-down(md) {
+  .commissie {
+    position: relative;
+    flex-direction: column;
+    align-items: stretch;
+
+    & > div {
+      height: auto;
+      opacity: 1;
+      padding: 0.5em;
+      transform: translateY(0) !important;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .head {
+    padding: 100px 0 0 0;
+  }
+  nav {
+    margin: 20px 0 10px 0;
+
+    .logo-titel {
+      img {
+        width: 100px;
+        margin-top: -25px;
+      }
+    }
+  }
+}
+
+.text-decoration-line-through {
+  text-decoration: line-through !important;
+}
