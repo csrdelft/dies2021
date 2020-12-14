@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-          content="Website voor de 59e dies der Civitas Studiosorum Reformatorum onder het thema ${VUE_APP_THEMA}.">
+        content="Website voor de 59e dies der Civitas Studiosorum Reformatorum onder het thema ${VUE_APP_THEMA}.">
     <meta name="author" content="Gerben Oolbekkink">
 
     <title>${VUE_APP_THEMA} - Dies ${VUE_APP_JAAR}</title>
@@ -20,7 +20,7 @@
             <a class="logo-titel d-inline-block" href="#">
                 <img src="${require('../src/assets/images/logo-menu.png')}"
                     srcset="${require('../src/assets/images/logo-menu.png')} 320w, ${require('../src/assets/images/logo-menu-2x.png')} 1000w"
-                    alt="Logo menu"/>
+                    alt="Logo menu" />
             </a>
             <div class="menu d-flex flex-column flex-md-row justify-content-between align-items-center">
                 <a class="d-none d-md-inline-block" href="#home">Home</a>
@@ -34,13 +34,9 @@
     <section class="head">
         <div class="container">
             <div class="logo-container">
-                <picture>
-                    <source srcset="${require('../src/assets/images/poster.jpg')}" media="(min-width: 320px)"
-                            type="image/png">
-                    <source srcset="${require('../src/assets/images/poster-2x.jpg')}" media="(min-width: 1000px)"
-                            type="image/png">
-                    <img class="logo-groot" src="${require('../src/assets/images/poster.jpg')}" alt="Logo"/>
-                </picture>
+                <img class="logo-groot" src="${require('../src/assets/images/poster.jpg')}" alt="Logo"
+                    srcset="${require('../src/assets/images/poster.jpg')} 600w, ${require('../src/assets/images/poster-2x.jpg')} 1200w"
+                    sizes="40vw" />
             </div>
         </div>
     </section>
@@ -60,7 +56,8 @@
         <h2>Programma</h2>
         <div class="container">
             <p>Momenteel staat hier nog geen programma uitwerking doordat Corona grote onzekerheid biedt voor een aantal
-                activiteiten. Als het programma zekerder zal zijn, komt hij hier gelijk te staan en laten wij dit weten.</p>
+                activiteiten. Als het programma zekerder zal zijn, komt hij hier gelijk te staan en laten wij dit weten.
+            </p>
         </div>
     </section>
     <section class="commissie">
@@ -70,9 +67,10 @@
             <div class="diescie-foto-container">
                 <img class="diescie-foto img-fluid" src="${require('../src/assets/images/diescie.jpg')}"
                     srcset="${require('../src/assets/images/diescie.jpg')} 320w, ${require('../src/assets/images/diescie-2x.jpg')} 2000w"
-                    alt="Dies Commissie"/>
+                    alt="Dies Commissie" />
             </div>
         </div>
     </section>
 </body>
+
 </html>
